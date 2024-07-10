@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Man</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="pigeon.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <img class="backG" src="media/pigeonPage/pigeon.png"></img>
+
+        <div class="weatherLayer cleanAir"></div>
+
+        <img id="pigeon" class="mainImage" src="media/pigeonPage/pigeon1.png" alt="">
+        <div id="returnButton">
+            <a href="index.html">
+                <img id="returnImg" src="media/btn2.png" alt="">
+            </a>
+        </div>
+    </div>
+    <audio id="coo" src="media/sound/pigeonCoo.mp3"></audio>
+
+    <audio id="natureSound" src="media/sound/natureSound.m4a" loop autoplay></audio>
+    <script>
+        let pigeon = document.querySelector('#pigeon');
+        let bg = document.querySelector('#bg');
+        let coo = document.querySelector('#coo');
+
+        pigeon.addEventListener('pointerdown', function () {
+            let jumpY = Math.random() * window.innerHeight * .1;
+            let jumpX = Math.random() * window.innerWidth * .2;
+            pigeon.style.transform = 'translateX(-' + jumpX + 'px) translateY(-' + jumpY + 'px)';
+
+            //randomly make the pigeon coo
+            let num = Math.floor(Math.random() * 2);
+            if (num == 1) {
+                coo.play();
+            }
+
+            setTimeout(function () {
+                jumpY = Math.random() * window.innerHeight * .05;
+                pigeon.style.transform = 'translateX(-' + jumpX + 'px) translateY(-' + jumpY + 'px)';
+            }, 1800);
+        })
+
+        document.querySelector('#natureSound').play();
+
+    </script>
+    <!-- <script src="weatherAPI.js"></script> -->
+
+</body>
+
+</html>

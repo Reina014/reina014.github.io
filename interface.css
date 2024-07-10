@@ -1,0 +1,191 @@
+/* Show the semitransparent layer for mobile devices */
+@media only screen and (max-width: 660px) {
+    .landscape-message {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      padding-top: 50%;
+      font-size: 200%;
+    }
+  }
+  
+  /* Hide the semitransparent layer for desktop devices */
+  @media only screen and (min-width: 660px) {
+    .landscape-message {
+      display: none;
+    }
+  }
+
+
+.box {
+    border: blue 3px solid;
+    box-sizing: border-box;
+
+}
+
+#box1 {
+    top: 0;
+    left: 0;
+    width: calc(33.33vw);
+    height: 100%;
+}
+
+#box2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(66.66vw);
+    height: 100%;
+}
+
+#areaBoxes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+#container {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+body{
+  overflow: hidden;
+}
+.backG {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    object-fit: cover;
+}
+
+
+.introBtn {
+    position: absolute;
+    z-index: 6;
+
+}
+
+#btn1,
+#btn2,
+#btn3 {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1000px;
+    border: 2px solid rgb(63, 70, 81);
+    width: 100%;
+    transform: scale(1);
+    transition: border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#btn1:hover,
+#btn2:hover,
+#btn3:hover {
+    box-shadow: rgba(0, 0, 0, 0.482) 0px 3px 8px;
+    border-radius: 1000px;
+    border: 2px solid black;
+    opacity: 1;
+    transform: scale(1.2);
+    transition: border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+#btn1Container {
+
+    width: 150px;
+    height: 150px;
+    top: 70%;
+    left: 3%;
+
+}
+
+#btn2Container {
+
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 40%;
+}
+
+#btn3Container {
+
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 90%;
+}
+
+.mainImage {
+    top: 0;
+    width: auto;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+    position: absolute;
+}
+
+#phone {
+    left: -20%;
+    transition: transform 5s;
+    z-index: 5;
+    opacity: 1;
+    transition: transform 3s opacity 3s;
+}
+
+#color-layer1 {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 7;
+    object-fit: cover;
+    transition: opacity 3s;
+}
+
+.dirtyAir {
+    background: rgb(72, 74, 103);
+    background: linear-gradient(0deg, rgba(72, 74, 103, 1) 0%, rgba(255, 245, 179, 1) 78%);
+}
+
+
+#subway {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    mix-blend-mode: overlay;
+    opacity: 1;
+    transition: opacity 3s;
+
+}
+
+#trainLayer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 8;
+}
